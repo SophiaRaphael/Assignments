@@ -1,19 +1,37 @@
+@import modal
+
 table
   text-align: left
   border: 1px solid #999
 thead
   background-color: #dddddd
-th 
+th,td 
   height: 35px
   padding-left: 10px
 td 
   border-top: 1px solid #aaa
-  height: 30px
-  padding-left: 10px
+button
+  background: #fff
+  font-size: 14px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  &:hover
+    cursor: pointer
 .dataTable
   width: 100%
   margin-bottom: 40px
+  .viewMore
+    height: 30px
+    width: 120px
+    border: none
+    color: #0095ff
+    outline: none
+    &:hover
+      text-decoration: underline
+      color: #07c
 .statusTable
   width: 25%
 .tableWrapper
   padding: 15px
+  position: relative
