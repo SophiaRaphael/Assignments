@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Modal extends Component {
+const Modal = (props) => {
 
-  constructor(props) {
-    super(props)
-  }
-  
-  render() {
-    return (
-      <div className={this.props.class === 'isOpen'? 'modal open': 'modal close'}>
-        <div className= 'modalContent'>
-          <div className='modalHeader'>
-            <h2>Detailed Message</h2>
-          </div>
-          <div className ='modalBody'>
-            <p>{this.props.message? this.props.message: 'NO Message' }</p>
-            <button className='close' onClick={()=>this.props.closeModal()} >Close </button>
-          </div>
+  return (
+    <div className={props.class === 'isOpen'? 'modal open': 'modal close'}>
+      <div className= 'modalContent'>
+        <div className='modalHeader'>
+          <h2>Detailed Message</h2>
+        </div>
+        <div className ='modalBody'>
+          <p>{props.message? props.message: 'NO Message' }</p>
+          <button className='close' onClick={()=>props.closeModal()} >Close </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Modal;
