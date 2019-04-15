@@ -1,0 +1,26 @@
+.modal
+  position: fixed
+  width: 100vw
+  height: 100vh
+  left: 0
+  background: rgba(0,0,0,0.2)
+  top: 0
+  &.open 
+    display: block
+  &.close
+    display: none
+  .modalContent
+    width: 350px
+    margin: 50px auto 0
+    background: #fff
+    padding: 20px 20px 35px
+    text-align: center
+    .close
+      display: block
+      margin: 0 auto
+      width: 140px
+      height: 35px
+      border: 1px solid #aaa 
+      background-color: #eee
+      &:hover
+        background-color: #ddd
